@@ -18,7 +18,6 @@ class Chatfuel:
     def get_response(self):
         if len(self.response) > 0:
             try:
-                print(json.dumps({'messages' : self.response}))
                 return json.dumps({'messages' : self.response})
             except:
                 raise
@@ -33,28 +32,28 @@ class Chatfuel:
             for message in messages:
                 self.response.append({'text': messages})
         else:
-            self.response.append({'text': 'Error!'})
+            raise ValueError('Error: "Text" are not List!')
 
 
     def sendImage(self, url_image):
         if self._isURL(url_image):
             self.createAttachment('image', {'url': url_image})
         else:
-            self.sendText('Error: Invalid URL!')
+            raise ValueError('Error: Invalid URL!')
 
 
     def sendVideo(self, url):
         if self._isURL(url):
             self.createAttachment('video', {'url': url})
         else:
-            self.sendText('Error: Invalid URL!')
+            raise ValueError('Error: Invalid URL!')
 
 
     def sendAudio(self, url):
         if self._isURL(url):
             self.createAttachment('audio', {'url': url})
         else:
-            self.sendText('Error: Invalid URL!')
+            raise ValueError('Error: Invalid URL!')
 
 
     def sendTextCard(self, text, buttons):
@@ -102,7 +101,8 @@ class Chatfuel:
                 'text': text,
                 'quick_replies': quickReplies
             })
-
+        else:
+            raise ValueError('Error: "Quick replies" are not List!')
 
     def createElement(self, title, image, subTitle, buttons):
         if self._isURL(image) and isinstance(buttons, list):
@@ -177,7 +177,7 @@ class Chatfuel:
                     }
                 })
         else:
-            self.response.append({'text':'Error: Invalid type!'})
+            raise ValueError('Error: "Type" are not List!')
 
 
     def _isURL(self, url):
