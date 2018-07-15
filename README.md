@@ -236,4 +236,9 @@ def redirectBlock():
 ![Redirect Block](https://github.com/peter-dinh/class-chatfuel-python/blob/master/img/redirectblock.png)
 
 
+## Demo:
+* [BotChat VietNam](m.me/2059865890937967)
+
+* [Peter Dinh](m.me/bot.peter.com.vn)
+
 ## Author: Peter Dinh
