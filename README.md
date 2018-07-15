@@ -237,8 +237,8 @@ def redirectBlock():
 
 
 ## Demo:
-* [BotChat VietNam](m.me/2059865890937967)
+* [BotChat VietNam](https://m.me/2059865890937967)
 
-* [Peter Dinh](m.me/bot.peter.com.vn)
+* [Peter Dinh](https://m.me/bot.peter.com.vn)
 
 ## Author: Peter Dinh
