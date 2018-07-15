@@ -1,6 +1,7 @@
 # class-chatfuel-python
 
 ## Descrpition: Python Wrapper for JSON API Chatfuel
+##### This project was inspired by [php-chatfuel-class](https://github.com/J2TEAM/php-chatfuel-class)
 
 ## Functions List:
 * Send Text:
