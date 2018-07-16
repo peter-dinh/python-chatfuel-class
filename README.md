@@ -89,7 +89,7 @@ def sendText(text):
     chatfuel.sendText(text)
     return chatfuel.get_response()
 ```
-![send-text](https://github.com/peter-dinh/class-chatfuel-python/blob/master/img/sendText.png)
+![send-text](https://peter-dinh.github.io/python-chatfuel-class/img/sendText.png)
 
 * Send Image:
 ```python
@@ -100,7 +100,7 @@ def sendImage():
     chatfuel.sendImage(url_image)
     return chatfuel.get_response()
 ```
-![send-Image](https://github.com/peter-dinh/class-chatfuel-python/blob/master/img/sendImage.png)
+![send-Image](https://peter-dinh.github.io/python-chatfuel-class/img/sendImage.png)
 
 * Send Audio:
 ```python
@@ -111,7 +111,7 @@ def sendAudio():
     chatfuel.sendAudio(url_audio)
     return chatfuel.get_response()
 ```
-![send-Audio](https://github.com/peter-dinh/class-chatfuel-python/blob/master/img/sendAudio.png)
+![send-Audio](https://peter-dinh.github.io/python-chatfuel-class/img/sendAudio.png)
 
 * Send Video:
 ```python
@@ -122,7 +122,7 @@ def sendVideo():
     chatfuel.sendVideo(url_video)
     return chatfuel.get_response()
 ```
-![send-Video](https://github.com/peter-dinh/class-chatfuel-python/blob/master/img/sendVideo.png)
+![send-Video](https://peter-dinh.github.io/python-chatfuel-class/img/sendVideo.png)
 
 * Send Button to Block:
 ```python
@@ -137,7 +137,7 @@ def createButtonToBlock():
     chatfuel.sendTextCard('Clicking the button below!', [ButtonToBlock])
     return chatfuel.get_response()
 ```
-![Button to Block](https://github.com/peter-dinh/class-chatfuel-python/blob/master/img/buttontoBlock.png)
+![Button to Block](https://peter-dinh.github.io/python-chatfuel-class/img/buttontoBlock.png)
 
 * Send Button to URL:
 ```python
@@ -151,7 +151,7 @@ def ButtonToURL():
     chatfuel.sendTextCard('Clicking the button below!', [ButtonToURL])
     return chatfuel.get_response()
 ```
-![Button To URL](https://github.com/peter-dinh/class-chatfuel-python/blob/master/img/buttontoURL.png)
+![Button To URL](https://peter-dinh.github.io/python-chatfuel-class/img/buttontoURL.png)
 
 * Send Button Post Back:
 ```python
@@ -165,7 +165,7 @@ def PostBackButton():
     chatfuel.sendTextCard('Clicking the button below!', [PostBackButton])
     return chatfuel.get_response()
 ```
-![PostBack Button](https://github.com/peter-dinh/class-chatfuel-python/blob/master/img/buttontopostback.png)
+![PostBack Button](https://peter-dinh.github.io/python-chatfuel-class/img/buttontopostback.png)
 
 * Send Button Call:
 ```python
@@ -179,7 +179,7 @@ def CallButton():
     chatfuel.sendTextCard('Clicking the button below!', [CallButton])
     return chatfuel.get_response()
 ```
-![Call Button](https://github.com/peter-dinh/class-chatfuel-python/blob/master/img/buttoncall.png)
+![Call Button](https://peter-dinh.github.io/python-chatfuel-class/img/buttoncall.png)
 
 * Send Gallery:
 ```python
@@ -199,7 +199,7 @@ def sendGallery():
     chatfuel.sendGallery(elements)
     return chatfuel.get_response()
 ```
-![send-Gallery](https://github.com/peter-dinh/class-chatfuel-python/blob/master/img/gallery.png)
+![send-Gallery](https://peter-dinh.github.io/python-chatfuel-class/img/gallery.png)
 
 * Send List:
 ```python
@@ -219,7 +219,7 @@ def sendList():
     return chatfuel.get_response()
 
 ```
-![send-List](https://github.com/peter-dinh/class-chatfuel-python/blob/master/img/sendList.png)
+![send-List](https://peter-dinh.github.io/python-chatfuel-class/img/sendList.png)
 
 * Send Quick Reply:
 ```python
@@ -235,7 +235,7 @@ def sendQuickReply():
     chatfuel.sendQuickReply('Text', [button_quick_replies_attributes, button_quick_replies])
     return chatfuel.get_response()
 ```
-![send-Quick-Reply](https://github.com/peter-dinh/class-chatfuel-python/blob/master/img/quickreply.png)
+![send-Quick-Reply](https://peter-dinh.github.io/python-chatfuel-class/img/quickreply.png)
 
 * Redirect Block
 ```python
@@ -243,7 +243,7 @@ def sendQuickReply():
 def redirectBlock():
     return json.dumps({"redirect_to_blocks": ["Welcome message", "Default answer"]})
 ```
-![Redirect Block](https://github.com/peter-dinh/class-chatfuel-python/blob/master/img/redirectblock.png)
+![Redirect Block](https://peter-dinh.github.io/python-chatfuel-class/img/redirectblock.png)
 
 
 ## Demo:
