@@ -249,6 +249,7 @@ def redirectBlock():
 ## Demo:
 * [BotChat VietNam](https://m.me/2059865890937967)
 
-* [Peter Dinh](https://m.me/bot.peter.com.vn)
+* [Learn English with Botchat](https://m.me/267955540449392)
 
-## Author: Peter Dinh
+* [Peter Dinh](https://m.me/bot.peter.com.vn)
+## Author: [@Peter Dinh](https://github.com/peter-dinh)
