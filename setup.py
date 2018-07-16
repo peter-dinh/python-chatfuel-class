@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="python_chatfuel_class",
-    version="2.0.6",
+    version="2.1.1",
     author="Peter Dinh",
     author_email="peterdinh018@gmail.com",
     description=" Python Wrapper for JSON API Chatfuel",
