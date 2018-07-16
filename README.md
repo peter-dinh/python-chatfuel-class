@@ -1,4 +1,4 @@
-# class-chatfuel-python
+# python-chatfuel-class
 
 ## Descrpition: Python Wrapper for JSON API Chatfuel
 ##### This project was inspired by [php-chatfuel-class](https://github.com/J2TEAM/php-chatfuel-class)
@@ -70,6 +70,15 @@ def createAttachment(self, _type, payload)
 
 ## Installation
 
+##### For python 2x
+```shell
+pip install python_chatfuel_class
+```
+
+##### For python 3x
+```shell
+pip3 install python_chatfuel_class
+```
 
 ## Usage
 * Send Text:
