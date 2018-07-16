@@ -1,6 +1,6 @@
 import json
 from flask import Flask
-from class_chatfuel import Chatfuel
+from python_chatfuel_class import Chatfuel
 app = Flask(__name__)
 
 

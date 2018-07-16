@@ -1,9 +1,8 @@
-from urllib.parse import urlparse
+import urllib3
 import json
 
 class Chatfuel:
-    CONST_VERSION = '2.0.1'
-
+    
     response = []
 
     def __init__(self, debug = False):
@@ -184,8 +183,9 @@ class Chatfuel:
         try:
             if not url:
                 raise ValueError ('Not found url!')
-            req = urlparse(url)
-            if req.scheme == 'https' or req.scheme == 'http':
+            http = urllib3.PoolManager()
+            r = http.request('GET', url)
+            if r.status == 200:
                 return 1
             else:
                 raise ValueError( url + ' Not url or url die!')
