@@ -1,4 +1,10 @@
-# python-chatfuel-class
+# Python Chatfuel Class
+[![GitHub license](https://img.shields.io/github/license/peter-dinh/python-chatfuel-class.svg)](https://github.com/peter-dinh/python-chatfuel-class/blob/master/LICENSE)
+[![Travis](https://img.shields.io/travis/peter-dinh/python-chatfuel-class.svg?style=flat-square)](https://github.com/peter-dinh/python-chatfuel-class)
+[![PyPI](https://img.shields.io/pypi/v/python-chatfuel-class.svg?style=flat-square)](https://pypi.org/project/python-chatfuel-class/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-chatfuel-class.svg?style=flat-square)](https://pypi.org/project/python-chatfuel-class/)
+[![GitHub stars](https://img.shields.io/github/stars/peter-dinh/python-chatfuel-class.svg?style=flat-square&label=Stars)](https://github.com/peter-dinh/python-chatfuel-class/stargazers)
+
 
 ## Descrpition: Python Wrapper for JSON API Chatfuel
 ##### This project was inspired by [php-chatfuel-class](https://github.com/J2TEAM/php-chatfuel-class)
