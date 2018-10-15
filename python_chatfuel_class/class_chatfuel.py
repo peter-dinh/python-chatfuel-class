@@ -114,7 +114,7 @@ class Chatfuel:
             raise ValueError('Minimum 2 items in Elements for List!')
         if isinstance(elements, list):
             self.createAttachment('template', {
-                'template_type' : list,
+                'template_type' : 'list',
                 'top_element_style' : 'large',
                 'elements'      :  elements
             })
