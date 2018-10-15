@@ -4,9 +4,11 @@ import json
 class Chatfuel:
     
     response = []
+    attributes = {}
 
     def __init__(self, debug = False):
         self.response = []
+        self.attributes = {}
 
 
     def __del__(self,):
@@ -17,10 +19,36 @@ class Chatfuel:
     def get_response(self):
         if len(self.response) > 0:
             try:
-                return json.dumps({'messages' : self.response})
+                return json.dumps({
+                    # added this
+                    'set_attributes': self.attributes,
+                    'messages' : self.response
+                })
+            except:
+                raise
+        else:
+            try:
+                return json.dumps({
+                    'set_attributes': self.attributes
+                })
             except:
                 raise
 
+    # added
+    def setAttrinutes(self, attributes):
+        if not isinstance(attributes, dict):
+            raise ValueError("Error: attributes parameter must be of type dict")
+        else:
+            self.attributes = attributes
+
+    # added
+    def redirectToBlocks(self, block_names):
+        if not isinstance(block_names, list):
+            raise ValueError("Error: block_names must be of type list")
+        else:
+            return json.dumps({
+                "redirect_to_blocks": block_names
+            })
 
     def sendText(self, messages = None):
         if messages is None:
@@ -86,7 +114,7 @@ class Chatfuel:
             raise ValueError('Minimum 2 items in Elements for List!')
         if isinstance(elements, list):
             self.createAttachment('template', {
-                'template_type' : 'list',
+                'template_type' : list,
                 'top_element_style' : 'large',
                 'elements'      :  elements
             })
@@ -115,6 +143,29 @@ class Chatfuel:
             raise ValueError('Buttons are not List!')
         return False
 
+    def createReceipt(self, recipient_name, order_number, payment_method, order_url, timestamp, address, summary, adjustments, elements, currency="USD"):
+        if not isinstance(address, dict):
+            raise ValueError("Error: address parameter must be a dict.")
+        elif not isinstance(summary, dict):
+            raise ValueError("Error: summary parameters must be a dict.")
+        elif not isinstance(adjustments, list):
+            raise ValueError("Error: adjustments parameters must be a list of dict.")
+        elif not isinstance(elements, list):
+            raise ValueError("Error: elements parameters must be a list of dict.")
+        else:
+            self.createAttachment('template', {
+                "template_type": "receipt",
+                "recipient_name": recipient_name,
+                "order_number": order_number,
+                "currency": currency, 
+                "payment_method": payment_method,
+                "order_url": order_url,
+                "timestamp": timestamp,
+                "address": address,
+                "summary": summary,
+                "adjustments": adjustments,
+                "elements": elements
+            })
 
     def createButtonToBlock(self, title, block, setAttributes = None):
         button = {}
